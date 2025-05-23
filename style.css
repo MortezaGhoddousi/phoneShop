@@ -35,19 +35,133 @@ body {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
+    min-width: 35vw;
+    padding: 4vw;
+    border-radius: 7px;
 }
 
 #modal,
 #modal form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    align-items: start;
 }
 
-#modal form {
-    gap: 10px;
+#modal a,
+.signupLogin a{
+    display: inline-flex;
+    justify-content: center;
+    color: #000;
+    font-weight: normal;
+    font-size: 15px;
+    transition: all ease 0.3s;
+}
+
+#modal a:hover{
+    color: var(--main);
+}
+
+.signupLogin{
+    width: 35vw;
+    padding: 3vw 4vw;
+    border-radius: 7px;
+    border: 2px solid #000;
+    margin: 2rem auto;
+}
+
+.signupLogin h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#modal form,
+.signupLogin form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#modal label,
+.signupLogin label{
+    font-size: 14px;
+    color: var(--txtColor);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.signupLogin input.error{
+    border: 1px solid red;
+}
+
+.signupLogin p.error{
+    color: red;
+    font-size: 14px;
+}
+
+#modal input,
+.signupLogin input{
+    border: 1px solid #eee;
+    outline: none;
+    padding: 15px 10px;
+    border-radius: 7px;
+    width: 100%;
+    transition: all ease 0.3s;
+}
+
+#modal input:focus,
+.signupLogin input:focus{
+    border: 1px solid var(--main);
+}
+
+#modal input[type="checkbox"],
+.signupLogin input[type="checkbox"]{
+    width: auto;
+    margin-left: 5px;
+}
+
+#modal input[value="Login"],
+#modal input[value="Signup"],
+.signupLogin input[value="Signup"]{
+    font-size: 17px;
+    transition: all ease 0.3s;
+}
+
+#modal input[value="Login"],
+.signupLogin input[value="Login"]{
+    background-color: #000;
+    font-size: 17px;
+    color: #fff;
+}
+
+#modal input[value="Login"]:hover,
+#modal input[value="Signup"]:hover,
+.signupLogin input[value="Signup"]:hover,
+.signupLogin input[value="Login"]:hover{
+    background-color: var(--main);
+    color: #fff;
+}
+
+.signupLogin input[value="Signup"]{
+    background-color: #000;
+    color: #fff;
+}
+
+
+.signupLogin span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    gap: 5px;
+}
+
+.signupLogin a{
+    color: var(--main);
 }
 
 header {
