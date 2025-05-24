@@ -1,5 +1,4 @@
 <?php
-session_start();
 $errors = array("username" => "", "password" => "", "total" => "");
 $pattern = "/^[a-zA-Z\w]+$/";
 
@@ -33,9 +32,15 @@ if (isset($_POST['submit'])) {
     if (array_filter($errors)) {
         $errors['total'] = 'there are some errors on your form! please try again!';
     } else {
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        header("Location: login.php");
+        $conn = mysqli_connect('localhost', 'admin', 'admin', 'phoneShop');
+        if ($conn){
+            $query = "INSERT INTO users(username, password) VALUES ('$username', '$password')";
+            $result = mysqli_query($conn, $query);
+            if ($result){
+                mysqli_close($conn);
+                header("Location: index.php");
+            }
+        }
     }
 }
 
@@ -84,7 +89,6 @@ if (isset($_POST['submit'])) {
 
             <input type="submit" name="submit" value="Signup">
 
-            <span>Do you have account? <a href="./login.php">Login</a></span>
         </form>
 
     </div>

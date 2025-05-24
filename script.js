@@ -28,4 +28,5 @@ window.onload = function () {
             section.style.filter = "brightness(1)";
         });
     });
+
 };

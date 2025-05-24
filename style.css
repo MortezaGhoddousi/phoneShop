@@ -22,6 +22,31 @@ body {
 
 /* start header & footer */
 
+.hide {
+    z-index: 111111;
+    position: fixed;
+    border-radius: 7px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: fit-content;
+    background-color: #09917f;
+    color: #fff;
+    font-size: 24px;
+    display: none;
+    transition: 0.3s ease;
+    padding: 10px 50px;
+}
+
+.hide p {
+    text-align: center;
+}
+
+#bag {
+    display: none;
+}
+
 .modal {
     display: none;
     transition: 0.5s ease;
@@ -48,7 +73,7 @@ body {
 }
 
 #modal a,
-.signupLogin a{
+.signupLogin a {
     display: inline-flex;
     justify-content: center;
     color: #000;
@@ -57,11 +82,11 @@ body {
     transition: all ease 0.3s;
 }
 
-#modal a:hover{
+#modal a:hover {
     color: var(--main);
 }
 
-.signupLogin{
+.signupLogin {
     width: 35vw;
     padding: 3vw 4vw;
     border-radius: 7px;
@@ -69,7 +94,7 @@ body {
     margin: 2rem auto;
 }
 
-.signupLogin h1{
+.signupLogin h1 {
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
@@ -85,7 +110,7 @@ body {
 }
 
 #modal label,
-.signupLogin label{
+.signupLogin label {
     font-size: 14px;
     color: var(--txtColor);
     width: 100%;
@@ -94,17 +119,17 @@ body {
     justify-content: start;
 }
 
-.signupLogin input.error{
+.signupLogin input.error {
     border: 1px solid red;
 }
 
-.signupLogin p.error{
+.signupLogin p.error {
     color: red;
     font-size: 14px;
 }
 
 #modal input,
-.signupLogin input{
+.signupLogin input {
     border: 1px solid #eee;
     outline: none;
     padding: 15px 10px;
@@ -114,25 +139,25 @@ body {
 }
 
 #modal input:focus,
-.signupLogin input:focus{
+.signupLogin input:focus {
     border: 1px solid var(--main);
 }
 
 #modal input[type="checkbox"],
-.signupLogin input[type="checkbox"]{
+.signupLogin input[type="checkbox"] {
     width: auto;
     margin-left: 5px;
 }
 
 #modal input[value="Login"],
 #modal input[value="Signup"],
-.signupLogin input[value="Signup"]{
+.signupLogin input[value="Signup"] {
     font-size: 17px;
     transition: all ease 0.3s;
 }
 
 #modal input[value="Login"],
-.signupLogin input[value="Login"]{
+.signupLogin input[value="Login"] {
     background-color: #000;
     font-size: 17px;
     color: #fff;
@@ -141,18 +166,17 @@ body {
 #modal input[value="Login"]:hover,
 #modal input[value="Signup"]:hover,
 .signupLogin input[value="Signup"]:hover,
-.signupLogin input[value="Login"]:hover{
+.signupLogin input[value="Login"]:hover {
     background-color: var(--main);
     color: #fff;
 }
 
-.signupLogin input[value="Signup"]{
+.signupLogin input[value="Signup"] {
     background-color: #000;
     color: #fff;
 }
 
-
-.signupLogin span{
+.signupLogin span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,7 +184,7 @@ body {
     gap: 5px;
 }
 
-.signupLogin a{
+.signupLogin a {
     color: var(--main);
 }
 

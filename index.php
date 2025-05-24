@@ -1,5 +1,16 @@
 
-<?php include("header.php"); ?>
+<?php 
+session_start();
+include("header.php"); 
+if (!empty($_SESSION['username'])) {
+    echo "<script>showMessage();</script>";
+}
+
+?>
+
+<div class='hide'>
+    <p>You have been logged in successfully ...</p>
+</div>
 
 <article class="homePage">
     <section class="part1">
@@ -106,14 +117,32 @@
             <button>View all</button>
         </div>
         <div>
-            <aside>
-                <img src="./assets/product-7-500x415.webp" alt="AirPods Pro" />
-                <h3>AirPods Pro</h3>
-                <p>$249.00</p>
-                <span>GADGETS</span>
-                <button>Add to Cart</button>
-            </aside>
-            <aside>
+            <?php
+                $conn = mysqli_connect('localhost', 'admin', 'admin', 'phoneShop');
+                if ($conn){         
+                    $query = "SELECT * FROM allgoods";
+                    $result = mysqli_query($conn, $query);
+                    $var = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    print_r($var);
+                }
+            ?>
+
+                <?php for($i=0; $i<sizeof($var); $i++) { ?>
+                    <?php $key = $var['id']; ?>
+                    <?php $imageAddress = $var['imageAddress']; ?>
+                    <?php $name = $var['name']; ?>
+                    <?php $price = $var['price']; ?>
+                    <?php $category = $var['category']; ?>
+                    <?php echo ("<aside key=$key>"); ?>
+                        <img src="<?php echo($imageAddress); ?>" alt="<?php echo("$name"); ?>"/>
+                        <h3><?php echo("$name"); ?></h3>
+                        <p>$<?php echo("$price"); ?></p>
+                        <span><?php echo("$category"); ?></span>
+                        <button>Add to Cart</button>
+                    <?php echo("</aside>") ?>;
+            <?php } ?>
+      
+            <!-- <aside>
                 <img src="./assets/product-10-500x415.webp" alt="AirTag" />
                 <h3>AirTag</h3>
                 <p>$29.00</p>
@@ -147,7 +176,7 @@
                 <p>$799.00</p>
                 <span>SMARTPHONES</span>
                 <button>Add to Cart</button>
-            </aside>
+            </aside> -->
         </div>
     </section>
 
