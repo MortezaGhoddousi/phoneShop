@@ -127,11 +127,11 @@ if (!empty($_SESSION['username'])) {
             ?>
 
                 <?php for($i=0; $i<sizeof($var); $i++) { ?>
-                    <?php $key = $var[0]['id']; ?>
-                    <?php $imageAddress = $var[0]['imageAddress']; ?>
-                    <?php $name = $var[0]['name']; ?>
-                    <?php $price = $var[0]['price']; ?>
-                    <?php $category = $var[0]['category']; ?>
+                    <?php $key = $var[$i]['id']; ?>
+                    <?php $imageAddress = $var[$i]['imageAddress']; ?>
+                    <?php $name = $var[$i]['name']; ?>
+                    <?php $price = $var[$i]['price']; ?>
+                    <?php $category = $var[$i]['category']; ?>
                     <?php echo ("<aside key=$key>"); ?>
                         <img src="<?php echo($imageAddress); ?>" alt="<?php echo("$name"); ?>"/>
                         <h3><?php echo("$name"); ?></h3>
