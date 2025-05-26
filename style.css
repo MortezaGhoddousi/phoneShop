@@ -22,6 +22,47 @@ body {
 
 /* start header & footer */
 
+.hide {
+    z-index: 111111;
+    position: fixed;
+    border-radius: 7px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: fit-content;
+    background-color: #09917f;
+    color: #fff;
+    font-size: 24px;
+    display: none;
+    transition: 0.3s ease;
+    padding: 10px 50px;
+}
+
+.hide p {
+    text-align: center;
+}
+
+#bag {
+    display: none;
+}
+
+#signout{
+    display: flex;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background-color: #f2f4f7;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+#signout:hover{
+    background-color: rgb(159, 2, 2);
+    color: #fff;
+}
+
 .modal {
     display: none;
     transition: 0.5s ease;
@@ -35,19 +76,132 @@ body {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
+    min-width: 35vw;
+    padding: 4vw;
+    border-radius: 7px;
 }
 
 #modal,
 #modal form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    align-items: start;
 }
 
-#modal form {
-    gap: 10px;
+#modal a,
+.signupLogin a {
+    display: inline-flex;
+    justify-content: center;
+    color: #000;
+    font-weight: normal;
+    font-size: 15px;
+    transition: all ease 0.3s;
+}
+
+#modal a:hover {
+    color: var(--main);
+}
+
+.signupLogin {
+    width: 35vw;
+    padding: 3vw 4vw;
+    border-radius: 7px;
+    border: 2px solid #000;
+    margin: 2rem auto;
+}
+
+.signupLogin h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#modal form,
+.signupLogin form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#modal label,
+.signupLogin label {
+    font-size: 14px;
+    color: var(--txtColor);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.signupLogin input.error {
+    border: 1px solid red;
+}
+
+.signupLogin p.error {
+    color: red;
+    font-size: 14px;
+}
+
+#modal input,
+.signupLogin input {
+    border: 1px solid #eee;
+    outline: none;
+    padding: 15px 10px;
+    border-radius: 7px;
+    width: 100%;
+    transition: all ease 0.3s;
+}
+
+#modal input:focus,
+.signupLogin input:focus {
+    border: 1px solid var(--main);
+}
+
+#modal input[type="checkbox"],
+.signupLogin input[type="checkbox"] {
+    width: auto;
+    margin-left: 5px;
+}
+
+#modal input[value="Login"],
+#modal input[value="Signup"],
+.signupLogin input[value="Signup"] {
+    font-size: 17px;
+    transition: all ease 0.3s;
+}
+
+#modal input[value="Login"],
+.signupLogin input[value="Login"] {
+    background-color: #000;
+    font-size: 17px;
+    color: #fff;
+}
+
+#modal input[value="Login"]:hover,
+#modal input[value="Signup"]:hover,
+.signupLogin input[value="Signup"]:hover,
+.signupLogin input[value="Login"]:hover {
+    background-color: var(--main);
+    color: #fff;
+}
+
+.signupLogin input[value="Signup"] {
+    background-color: #000;
+    color: #fff;
+}
+
+.signupLogin span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    gap: 5px;
+}
+
+.signupLogin a {
+    color: var(--main);
 }
 
 header {
@@ -1452,6 +1606,49 @@ footer > div:nth-child(2) > p {
     grid-area: part5Job;
     color: #4d5d6d;
     font-size: 15px;
+}
+
+.cart .part1{
+    padding: var(--plr);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cart .part1 h1{
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.cart .part1 div{
+    background-color: #f0f1f3;
+    color: #4d5d6d;
+    padding: 20px 25px;
+    border-radius: 7px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cart .part1 div i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.cart .part1 .returnToShop{
+    padding: 15px 20px;
+    background-color: #f0f1f3;
+    color: #000;
+    border-radius: 7px;
+    font-size: 15px;
+    width: fit-content;
+    transition: all ease 0.3s;
+}
+
+.cart .part1 .returnToShop:hover{
+    background-color: var(--main);
+    color: #fff;
 }
 
 /* end about-us page */

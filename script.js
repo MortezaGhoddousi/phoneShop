@@ -28,4 +28,14 @@ window.onload = function () {
             section.style.filter = "brightness(1)";
         });
     });
+
+    var signoutBtn = document.querySelector("header form");
+    if (sessionStorage.getItem("loggedIn") === "true") {
+        var userIcon = document.querySelector("#user");
+        var bagIcon = document.querySelector("#bag");
+        userIcon.style.display = "none";
+        bagIcon.style.display = "block";
+    } else {
+        signoutBtn.style.display = "none";
+    }
 };
