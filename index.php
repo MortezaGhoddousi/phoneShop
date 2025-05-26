@@ -1,11 +1,9 @@
 
 <?php 
-session_start();
 include("header.php"); 
 if (!empty($_SESSION['username'])) {
     echo "<script>showMessage();</script>";
 }
-
 ?>
 
 <div class='hide'>
@@ -141,42 +139,6 @@ if (!empty($_SESSION['username'])) {
                         <button>Add to Cart</button>
                     <?php echo("</aside>"); ?>
             <?php } ?>
-      
-            <!-- <aside>
-                <img src="./assets/product-10-500x415.webp" alt="AirTag" />
-                <h3>AirTag</h3>
-                <p>$29.00</p>
-                <span>GADGETS</span>
-                <button>Add to Cart</button>
-            </aside>
-            <aside>
-                <img src="./assets/product-1-1-500x415.webp" alt="Apple Watch Series 6" />
-                <h3>Apple Watch Series 6</h3>
-                <p>$399.00</p>
-                <span>GADGETS</span>
-                <button>Add to Cart</button>
-            </aside>
-            <aside>
-                <img src="./assets/product-6-500x415.webp" alt="HTC Vive Pro 2" />
-                <h3>HTC Vive Pro 2</h3>
-                <p>$699.00</p>
-                <span>GADGETS, GAMING</span>
-                <button>Add to Cart</button>
-            </aside>
-            <aside>
-                <img src="./assets/product-5-500x415.webp" alt="Razer Blackshark" />
-                <h3>Razer Blackshark</h3>
-                <p>$159.00</p>
-                <span>GADGETS, GAMING</span>
-                <button>Add to Cart</button>
-            </aside>
-            <aside>
-                <img src="./assets/product-2-1-500x415.webp" alt="Samsung Galaxy S21" />
-                <h3>Samsung Galaxy S21</h3>
-                <p>$799.00</p>
-                <span>SMARTPHONES</span>
-                <button>Add to Cart</button>
-            </aside> -->
         </div>
     </section>
 

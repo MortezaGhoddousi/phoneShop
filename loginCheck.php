@@ -1,5 +1,4 @@
 <?php
-session_start();
 $errors = array("username" => "", "password" => "", "total" => "");
 $pattern = "/^[a-zA-Z\w]+$/";
 
@@ -37,7 +36,6 @@ if (isset($_POST['submit']) || isset($_POST['submitLogin'])) {
         mysqli_close($conn);
         if (array_filter($var)){
             $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
             header("Location: index.php");
         } 
     }
