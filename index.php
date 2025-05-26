@@ -123,10 +123,11 @@ if (!empty($_SESSION['username'])) {
                     $query = "SELECT * FROM allgoods";
                     $result = mysqli_query($conn, $query);
                     $var = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    mysqli_close($conn);
                 }
             ?>
 
-                <?php for($i=0; $i<sizeof($var); $i++) { ?>
+                <?php for($i=0; $i<6; $i++) { ?>
                     <?php $key = $var[$i]['id']; ?>
                     <?php $imageAddress = $var[$i]['imageAddress']; ?>
                     <?php $name = $var[$i]['name']; ?>
