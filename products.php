@@ -42,7 +42,7 @@
                     <?php $name = $var[$i]['name']; ?>
                     <?php $price = $var[$i]['price']; ?>
                     <?php $category = $var[$i]['category']; ?>
-                    <?php echo ("<aside key=$key>"); ?>
+                    <?php echo ("<aside key=$key id=$key>"); ?>
                         <img src="<?php echo($imageAddress); ?>" alt="<?php echo("$name"); ?>"/>
                         <h3><?php echo("$name"); ?></h3>
                         <p>$<?php echo("$price"); ?></p>

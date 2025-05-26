@@ -10,6 +10,14 @@ else if (isset($_POST['submitSignUp'])){
 
 ?>
 
+<?php
+$userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
+?>
+<script>
+  const userId = <?php echo json_encode($userId); ?>;
+</script>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +38,6 @@ else if (isset($_POST['submitSignUp'])){
             
             var userIcon = document.querySelector("#user");
             var bagIcon = document.querySelector("#bag");
-            var signout = document.querySelector("#signout");
             userIcon.style.display = "none";
             bagIcon.style.display = "block";
 

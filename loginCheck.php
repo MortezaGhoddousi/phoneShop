@@ -36,6 +36,7 @@ if (isset($_POST['submit']) || isset($_POST['submitLogin'])) {
         mysqli_close($conn);
         if (array_filter($var)){
             $_SESSION['username'] = $username;
+            $_SESSION['id'] = $var[0]['id'];
             header("Location: index.php");
         } 
     }
