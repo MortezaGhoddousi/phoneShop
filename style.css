@@ -47,6 +47,22 @@ body {
     display: none;
 }
 
+#signout{
+    display: flex;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background-color: #f2f4f7;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+#signout:hover{
+    background-color: rgb(159, 2, 2);
+    color: #fff;
+}
+
 .modal {
     display: none;
     transition: 0.5s ease;
@@ -1590,6 +1606,49 @@ footer > div:nth-child(2) > p {
     grid-area: part5Job;
     color: #4d5d6d;
     font-size: 15px;
+}
+
+.cart .part1{
+    padding: var(--plr);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cart .part1 h1{
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.cart .part1 div{
+    background-color: #f0f1f3;
+    color: #4d5d6d;
+    padding: 20px 25px;
+    border-radius: 7px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cart .part1 div i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.cart .part1 .returnToShop{
+    padding: 15px 20px;
+    background-color: #f0f1f3;
+    color: #000;
+    border-radius: 7px;
+    font-size: 15px;
+    width: fit-content;
+    transition: all ease 0.3s;
+}
+
+.cart .part1 .returnToShop:hover{
+    background-color: var(--main);
+    color: #fff;
 }
 
 /* end about-us page */
