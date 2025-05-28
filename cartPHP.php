@@ -1,20 +1,17 @@
 <?php
 
-$userId = $_POST['userId'] ?? null;
-$goodId = $_POST['goodId'] ?? null;
+
 $goodIdCount = $_POST['data'] ?? null;
 
-echo $userId;
-echo $goodId;
 
-if (!$userId || !$goodId) {
+if (!$goodIdCount) {
     echo "Missing userId or goodId";
     exit;
 }
 
 $conn = mysqli_connect("localhost", "admin", "admin", "phoneShop");
 if ($conn) {
-    $query = "INSERT INTO goods (userId, goodId) VALUES ('$userId', '$goodId')";
+    $query = "UPDATE allgoods SET count = count + 1 WHERE id='$goodIdCount'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
 }

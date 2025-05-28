@@ -36,19 +36,36 @@
                 }
             ?>
 
-                <?php for($i=0; $i<sizeof($var); $i++) { ?>
-                    <?php $key = $var[$i]['id']; ?>
-                    <?php $imageAddress = $var[$i]['imageAddress']; ?>
-                    <?php $name = $var[$i]['name']; ?>
-                    <?php $price = $var[$i]['price']; ?>
-                    <?php $category = $var[$i]['category']; ?>
-                    <?php echo ("<aside key=$key id=$key>"); ?>
-                        <img src="<?php echo($imageAddress); ?>" alt="<?php echo("$name"); ?>"/>
-                        <h3><?php echo("$name"); ?></h3>
-                        <p>$<?php echo("$price"); ?></p>
-                        <span><?php echo("$category"); ?></span>
-                        <button>Add to Cart</button>
-                    <?php echo("</aside>"); ?>
+            <?php for($i=0; $i<sizeof($var); $i++) { ?>
+                <?php $key = $var[$i]['id']; ?>
+                <?php $imageAddress = $var[$i]['imageAddress']; ?>
+                <?php $name = $var[$i]['name']; ?>
+                <?php $price = $var[$i]['price']; ?>
+                <?php $category = $var[$i]['category']; ?>
+
+                <?php 
+                $btnText = 'Add to Cart';                             
+                $j=0; 
+                while ($j<sizeof($varUser)) {
+                    if ($key == $varUser[$j]['goodId']) {
+                        $btnText = 'Added';
+                        break;
+                    }
+                    $j++;
+                }
+                ?>
+                                    
+                <?php echo ("<aside key=$key id=$key>"); ?>
+                    <img src="<?php echo($imageAddress); ?>" alt="<?php echo("$name"); ?>"/>
+                    <h3><?php echo("$name"); ?></h3>
+                    <p>$<?php echo("$price"); ?></p>
+                    <span><?php echo("$category"); ?></span>
+                    <button class="productBtn"><?php echo($btnText); ?></button>
+                <?php echo("</aside>"); ?>
+                    
+                
+                
+                
             <?php } ?>
         </div>
     </section>

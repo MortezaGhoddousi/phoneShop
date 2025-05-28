@@ -1,11 +1,20 @@
 <?php
 session_start();
 if (isset($_POST['submitLogin'])) {
-    include('loginCheck.php'); 
-}
-else if (isset($_POST['submitSignUp'])){
+    include('loginCheck.php');
+} else if (isset($_POST['submitSignUp'])) {
     header('Location: signup.php');
 }
+
+$userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
+$conn = mysqli_connect('localhost', 'admin', 'admin', 'phoneShop');
+if ($conn) {
+    $query = "SELECT * FROM goods WHERE userId='$userId'";
+    $result = mysqli_query($conn, $query);
+    $varUser = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_close($conn);
+}
+
 
 
 ?>
@@ -14,7 +23,7 @@ else if (isset($_POST['submitSignUp'])){
 $userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 ?>
 <script>
-  const userId = <?php echo json_encode($userId); ?>;
+    const userId = <?php echo json_encode($userId); ?>;
 </script>
 
 
@@ -24,8 +33,8 @@ $userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 <head>
     <script>
         function showMessage() {
-            if (sessionStorage.getItem("loggedIn")===null){
-                window.onload = function () {
+            if (sessionStorage.getItem("loggedIn") === null) {
+                window.onload = function() {
                     const message = document.querySelector(".hide");
                     message.style.display = "block";
                     setTimeout(() => {
@@ -35,15 +44,13 @@ $userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
             }
 
             sessionStorage.setItem('loggedIn', "true");
-            
+
             var userIcon = document.querySelector("#user");
             var bagIcon = document.querySelector("#bag");
             userIcon.style.display = "none";
             bagIcon.style.display = "block";
 
         }
-
-
     </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,7 +86,10 @@ $userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
                     </svg></a>
             </li>
             <li id="bag">
-                <a href="./cart.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg></a>
+                <span class="badge"><?php echo(sizeof($varUser)); ?></span>
+                <a href="./cart.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;">
+                        <path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path>
+                    </svg></a>
             </li>
             <form action="signout.php" method="POST">
                 <input type="submit" name="signout" id="signout" value="Sign out">
@@ -98,9 +108,34 @@ $userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 
                 <input type="submit" name="submitLogin" value="Login">
                 <input type="submit" name="submitSignUp" value="Signup">
-                
+
                 <a href="">Forget Password?</a>
             </form>
 
         </div>
+
+        <!-- <div id="bagCard">
+            <aside>
+                <a href="#"><img src="./assets/product-7-500x415.webp" alt="AirPods Pro" /></a>
+                <a href="#">
+                    <h3>AirPods Pro</h3>
+                </a>
+                <p>$249.00</p>
+                <i class='bx bxs-trash-alt'></i>
+            </aside>
+            <aside>
+                <a href="#"><img src="./assets/product-7-500x415.webp" alt="AirPods Pro" /></a>
+                <a href="#">
+                    <h3>AirPods Pro</h3>
+                </a>
+                <p>$249.00</p>
+                <i class='bx bxs-trash-alt'></i>
+            </aside>
+            <div>
+                <h2>Subtotal:</h2>
+                <span>677.00</span>
+                <a href="./cart.php">View cart</a>
+                <a href="./cart.php">Checkout</a>
+            </div>
+        </div> -->
     </header>

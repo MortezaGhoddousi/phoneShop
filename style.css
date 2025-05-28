@@ -45,6 +45,24 @@ body {
 
 #bag {
     display: none;
+    position: relative;
+}
+
+.badge {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    transform: translate(-50%, 50%);
+    height: 17px;
+    width: 17px;
+    background-color: #5b38ed;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 100;
 }
 
 #signout {
@@ -185,6 +203,118 @@ body {
 .signupLogin input[value="Login"]:hover {
     background-color: var(--main);
     color: #fff;
+}
+
+#bagCard {
+    min-width: 310px;
+    position: absolute;
+    right: 1rem;
+    top: 8rem;
+    background-color: #29333c;
+    border-radius: 7px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#bagCard > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "bagCardSubtotal bagCardSum"
+        "bagCardViewCart bagCardCheckout";
+    gap: 10px;
+}
+
+#bagCard > div h2 {
+    grid-area: bagCardSubtotal;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#bagCard > div span {
+    grid-area: bagCardSum;
+    justify-self: end;
+}
+
+#bagCard > div a:nth-child(3) {
+    grid-area: bagCardViewCart;
+}
+
+#bagCard > div a:nth-child(4) {
+    grid-area: bagCardCheckout;
+    justify-self: end;
+}
+
+#bagCard > div a:nth-child(3),
+#bagCard > div a:nth-child(4) {
+    width: 100%;
+    border-radius: 7px;
+    background-color: #f2f4f7;
+    color: #000;
+    padding: 12px;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    transition: all ease 0.3s;
+}
+
+#bagCard > div a:nth-child(3):hover,
+#bagCard > div a:nth-child(4):hover {
+    background-color: var(--main);
+    color: #fff;
+}
+
+#bagCard aside {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "bagCardImage bagCardName bagCardRemove"
+        "bagCardImage bagCardPrice bagCardRemove";
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#bagCard aside a:nth-child(1) {
+    grid-area: bagCardImage;
+}
+
+#bagCard aside a:nth-child(2) {
+    grid-area: bagCardName;
+    font-size: 12px;
+    transition: all ease 0.3s;
+}
+
+#bagCard aside p {
+    grid-area: bagCardPrice;
+    font-size: 14px;
+}
+
+#bagCard aside a:nth-child(2):hover {
+    color: var(--main);
+}
+
+#bagCard aside i {
+    grid-area: bagCardRemove;
+    align-self: center;
+    justify-self: center;
+    margin-right: 10px;
+    transition: all ease 0.3s;
+}
+
+#bagCard aside i:hover {
+    color: red;
+}
+
+#bagCard aside a:nth-child(1) img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 7px;
 }
 
 .signupLogin input[value="Signup"] {
@@ -1703,7 +1833,311 @@ footer > div:nth-child(2) > p {
     color: #fff;
 }
 
-/* end about-us page */
+.cart .part2 {
+    padding: var(--plr);
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "part2Title part2Title"
+        "part2Main part2Aside";
+    column-gap: 3rem;
+}
+
+.cart .part2 > h1 {
+    grid-area: part2Title;
+    font-size: 30px;
+}
+
+.cart .part2 > div {
+    grid-area: part2Main;
+}
+
+.cart .part2 > aside {
+    grid-area: part2Aside;
+    min-width: 25vw;
+    height: fit-content;
+    padding: 2vw;
+    border-radius: 7px;
+    border: 2px solid #eee;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas:
+        "CartTotalTitle CartTotalTitle"
+        "CartTotalSubtotal CartTotalNumber1"
+        "CartTotalTotal CartTotalNumber2"
+        "CartTotalCheckout CartTotalCheckout";
+}
+
+.cart .part2 aside h1 {
+    grid-area: CartTotalTitle;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+.cart .part2 aside h2:nth-child(2) {
+    grid-area: CartTotalSubtotal;
+    font-size: 16px;
+    color: #4d5d6d;
+    font-weight: normal;
+    align-self: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+.cart .part2 aside span:nth-child(3) {
+    grid-area: CartTotalNumber1;
+    font-size: 16px;
+    color: #39414d;
+    text-align: right;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+.cart .part2 aside h2:nth-child(4) {
+    grid-area: CartTotalTotal;
+    font-size: 16px;
+    color: #4d5d6d;
+    font-weight: normal;
+    align-self: center;
+}
+
+.cart .part2 aside span:nth-child(5) {
+    grid-area: CartTotalNumber2;
+    font-size: 16px;
+    color: #39414d;
+    justify-self: end;
+    font-weight: bold;
+    align-self: center;
+}
+
+.cart .part2 aside input {
+    grid-area: CartTotalCheckout;
+    background-color: #f2f4f7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-top: 3rem;
+    padding: 15px;
+    transition: all ease 0.3s;
+}
+
+.cart .part2 aside input:hover {
+    background-color: var(--main);
+    color: #fff;
+}
+
+.cart .part2 table thead,
+.cart .part2 table tbody,
+.cart .part2 table tr {
+    width: 100%;
+}
+
+.cart .part2 table {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart .part2 table thead {
+    border-bottom: 2px solid #eee;
+    display: inline-flex;
+    padding: 1.5rem 0;
+}
+
+.cart .part2 table thead tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "part2Title1 part2Title1 part2Title2 part2Title3";
+}
+
+.cart .part2 table thead tr th:nth-child(1) {
+    grid-area: part2Title1;
+    text-align: left;
+}
+
+.cart .part2 table thead tr th:nth-child(2) {
+    grid-area: part2Title2;
+}
+
+.cart .part2 table thead tr th:nth-child(3) {
+    grid-area: part2Title3;
+}
+
+.cart .part2 table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "part2Box1 part2Box1 part2Box2 part2Box3";
+}
+
+.cart .part2 table tbody tr > td:nth-child(1) {
+    grid-area: part2Box1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "part2Box1Image part2Box1Name"
+        "part2Box1Image part2Box1Price";
+    row-gap: 5px;
+    column-gap: 20px;
+}
+
+.cart .part2 table tbody tr {
+    border-bottom: 2px solid #eee;
+    padding: 1.5rem 0;
+}
+
+.cart .part2 table tbody tr > td:nth-child(1) a:nth-child(1) {
+    grid-area: part2Box1Image;
+}
+
+.cart .part2 table tbody tr > td:nth-child(1) a:nth-child(1) img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.cart .part2 table tbody tr > td:nth-child(1) a:nth-child(2) h3 {
+    grid-area: part2Box1Name;
+    font-size: 17px;
+}
+
+.cart .part2 table tbody tr > td:nth-child(1) a:nth-child(2) {
+    align-self: flex-end;
+    color: #4d5d6d;
+    transition: all ease 0.3s;
+}
+
+.cart .part2 table tbody tr > td:nth-child(1) a:nth-child(2):hover {
+    color: var(--main);
+}
+
+.cart .part2 table tbody tr > td:nth-child(1) p {
+    grid-area: part2Box1Price;
+    align-self: flex-start;
+    color: #4d5d6d;
+}
+
+.cart .part2 table tbody tr td:nth-child(2) {
+    grid-area: part2Box2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    padding: 10px;
+    color: #4d5d6d;
+}
+
+.cart .part2 table tbody tr td:nth-child(2) button {
+    width: 25px;
+    height: 25px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    font-size: 20px;
+    border-radius: 7px;
+    color: #4d5d6d;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.cart .part2 table tbody tr td:nth-child(2) button:hover {
+    background-color: var(--main);
+    color: #fff;
+}
+
+.cart .part2 table tbody tr > td:nth-child(3) {
+    grid-area: part2Box3;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart .part2 table tbody tr > td:nth-child(3) span {
+    color: #4d5d6d;
+}
+
+.cart .part2 table tbody tr > td:nth-child(3) i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translate(0, -35%);
+    font-size: 20px;
+    color: #4d5d6d;
+    transition: all ease 0.3s;
+}
+
+.cart .part2 table tbody tr > td:nth-child(3) i:hover {
+    color: red;
+}
+
+.cart .part2 > div form {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "part2Input1 part2Input2 part2Input3";
+    margin-top: 2rem;
+    gap: 10px;
+}
+
+.cart .part2 > div form input:nth-child(1) {
+    grid-area: part2Input1;
+    border: 2px solid #eee;
+    outline: none;
+    border-radius: 7px;
+    padding: 15px;
+    color: #4d5d6d;
+    justify-self: start;
+    transition: all ease 0.3s;
+}
+
+.cart .part2 > div form input:nth-child(1):focus {
+    border: 2px solid var(--main);
+}
+
+.cart .part2 > div form input:nth-child(2) {
+    grid-area: part2Input2;
+}
+
+.cart .part2 > div form input:nth-child(3) {
+    grid-area: part2Input3;
+    width: 100%;
+}
+
+.cart .part2 > div form input:nth-child(2),
+.cart .part2 > div form input:nth-child(3) {
+    border-radius: 7px;
+    padding: 15px 30px;
+    justify-self: start;
+    background-color: #f3f5f7;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.cart .part2 > div form input:nth-child(2):hover,
+.cart .part2 > div form input:nth-child(3):hover {
+    background-color: var(--main);
+    color: #fff;
+}
+
+/* end cart page */
 /* start blog page */
 
 .blog .part2 {
@@ -2226,6 +2660,15 @@ footer > div:nth-child(2) > p {
     }
 
     /* end contactUs 1000px */
+    /* start cart 1000px */
+
+    .cart .part2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* end cart 1000px */
 }
 
 @media only screen and (max-width: 850px) {
@@ -2579,6 +3022,40 @@ footer > div:nth-child(2) > p {
     }
 
     /* end contactUs 690px */
+
+    /* start cart 690px */
+
+    thead tr th:nth-child(2),
+    thead tr th:nth-child(3) {
+        display: none;
+    }
+
+    .cart .part2 > div form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart .part2 table tbody tr > td:nth-child(3) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cart .part2 table tbody tr > td:nth-child(3) i {
+        position: unset;
+        transform: unset;
+    }
+
+    .cart .part2 table tbody tr {
+        grid-template-columns: 1fr auto auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "part2Box1 part2Box2"
+            "part2Box1 part2Box3";
+    }
+
+    /* end cart 690px */
 }
 
 @media only screen and (max-width: 420px) {
@@ -2644,3 +3121,4 @@ footer > div:nth-child(2) > p {
         transform: rotate(360deg);
     }
 }
+

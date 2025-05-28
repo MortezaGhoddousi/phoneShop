@@ -49,6 +49,7 @@ window.onload = function () {
                 if (count > 3) {
                     clearInterval(t);
                     e.target.innerHTML = "Added ";
+                    window.location.reload();
                 }
             }, 500);
 
@@ -67,6 +68,25 @@ window.onload = function () {
                 .then((response) => response.text())
                 .then((result) => {
                     console.log(result);
+                })
+                .catch((error) => console.error("Error:", error));
+        });
+    });
+
+    var cartBtns = document.querySelectorAll(".cart button");
+    cartBtns.forEach((cartBtn) => {
+        cartBtn.addEventListener("click", (e) => {
+            goodId = e.target.parentNode.id;
+            fetch("cartPHP.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: "data=" + encodeURIComponent(goodId),
+            })
+                .then((response) => response.text())
+                .then(() => {
+                    window.location.reload();
                 })
                 .catch((error) => console.error("Error:", error));
         });
