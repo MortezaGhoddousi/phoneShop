@@ -47,7 +47,7 @@ body {
     display: none;
 }
 
-#signout{
+#signout {
     display: flex;
     padding: 10px 15px;
     outline: none;
@@ -58,7 +58,7 @@ body {
     transition: all ease 0.3s;
 }
 
-#signout:hover{
+#signout:hover {
     background-color: rgb(159, 2, 2);
     color: #fff;
 }
@@ -878,7 +878,7 @@ footer > div:nth-child(2) > p {
 .homePage .part7 > div:nth-child(1) button,
 .products .part2 > div:nth-child(2) aside button,
 .contactUs .part4 > div:nth-child(1) button,
-.contactUs .part4 > div:nth-child(2) aside button{
+.contactUs .part4 > div:nth-child(2) aside button {
     border: none;
     outline: none;
     border-radius: 7px;
@@ -899,6 +899,12 @@ footer > div:nth-child(2) > p {
     cursor: pointer;
 }
 
+.homePage .part4 > div button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .homePage .part4 > div:nth-child(2),
 .contactUs .part4 > div:nth-child(2) {
     display: grid;
@@ -911,32 +917,32 @@ footer > div:nth-child(2) > p {
 }
 
 .homePage .part4 > div:nth-child(2) aside:nth-child(1),
-.contactUs .part4 > div:nth-child(2) aside :nth-child(1){
+.contactUs .part4 > div:nth-child(2) aside :nth-child(1) {
     grid-area: part4Box1;
 }
 
 .homePage .part4 > div:nth-child(2) aside:nth-child(2),
-.contactUs .part4 > div:nth-child(2) aside :nth-child(2){
+.contactUs .part4 > div:nth-child(2) aside :nth-child(2) {
     grid-area: part4Box2;
 }
 
 .homePage .part4 > div:nth-child(2) aside:nth-child(3),
-.contactUs .part4 > div:nth-child(2) aside :nth-child(3){
+.contactUs .part4 > div:nth-child(2) aside :nth-child(3) {
     grid-area: part4Box3;
 }
 
 .homePage .part4 > div:nth-child(2) aside:nth-child(4),
-.contactUs .part4 > div:nth-child(2) aside :nth-child(4){
+.contactUs .part4 > div:nth-child(2) aside :nth-child(4) {
     grid-area: part4Box4;
 }
 
 .homePage .part4 > div:nth-child(2) aside:nth-child(5),
-.contactUs .part4 > div:nth-child(2) aside :nth-child(5){
+.contactUs .part4 > div:nth-child(2) aside :nth-child(5) {
     grid-area: part4Box5;
 }
 
 .homePage .part4 > div:nth-child(2) aside:nth-child(6),
-.contactUs .part4 > div:nth-child(2) aside :nth-child(6){
+.contactUs .part4 > div:nth-child(2) aside :nth-child(6) {
     grid-area: part4Box6;
 }
 
@@ -1654,7 +1660,7 @@ footer > div:nth-child(2) > p {
     font-size: 15px;
 }
 
-.cart .part1{
+.cart .part1 {
     padding: var(--plr);
     width: 100vw;
     display: flex;
@@ -1662,12 +1668,12 @@ footer > div:nth-child(2) > p {
     gap: 2rem;
 }
 
-.cart .part1 h1{
+.cart .part1 h1 {
     font-size: 30px;
     margin-bottom: 1rem;
 }
 
-.cart .part1 div{
+.cart .part1 div {
     background-color: #f0f1f3;
     color: #4d5d6d;
     padding: 20px 25px;
@@ -1677,12 +1683,12 @@ footer > div:nth-child(2) > p {
     align-items: center;
 }
 
-.cart .part1 div i{
+.cart .part1 div i {
     font-size: 20px;
     margin-right: 5px;
 }
 
-.cart .part1 .returnToShop{
+.cart .part1 .returnToShop {
     padding: 15px 20px;
     background-color: #f0f1f3;
     color: #000;
@@ -1692,7 +1698,7 @@ footer > div:nth-child(2) > p {
     transition: all ease 0.3s;
 }
 
-.cart .part1 .returnToShop:hover{
+.cart .part1 .returnToShop:hover {
     background-color: var(--main);
     color: #fff;
 }
@@ -1700,50 +1706,50 @@ footer > div:nth-child(2) > p {
 /* end about-us page */
 /* start blog page */
 
-.blog .part2{
+.blog .part2 {
     width: 100vw;
     padding: 2rem var(--plr);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "part1Box1 part1Box2 part1Box3"
-    "part1Box4 part1Box5 part1Box6";
+    grid-template-areas:
+        "part1Box1 part1Box2 part1Box3"
+        "part1Box4 part1Box5 part1Box6";
     gap: 2rem;
 }
 
-.blog .part2 aside:nth-child(1){
+.blog .part2 aside:nth-child(1) {
     grid-area: part1Box1;
 }
 
-.blog .part2 aside:nth-child(2){
+.blog .part2 aside:nth-child(2) {
     grid-area: part1Box2;
 }
 
-.blog .part2 aside:nth-child(3){
+.blog .part2 aside:nth-child(3) {
     grid-area: part1Box3;
 }
 
-.blog .part2 aside:nth-child(4){
+.blog .part2 aside:nth-child(4) {
     grid-area: part1Box4;
 }
 
-.blog .part2 aside:nth-child(5){
+.blog .part2 aside:nth-child(5) {
     grid-area: part1Box5;
 }
 
-.blog .part2 aside:nth-child(6){
+.blog .part2 aside:nth-child(6) {
     grid-area: part1Box6;
 }
 
-.blog .part2 aside{
+.blog .part2 aside {
     width: 100%;
 }
 
 /* end blog page */
 /* start contactUs page */
 
-.contactUs .part2{
+.contactUs .part2 {
     width: 90vw;
     padding: 0 var(--plr);
     display: flex;
@@ -1756,43 +1762,43 @@ footer > div:nth-child(2) > p {
     gap: 1rem;
 }
 
-.contactUs .part2 div{
+.contactUs .part2 div {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr auto auto;
-    grid-template-areas: 
-    "part2Icon part2Heading"
-    ". part2Text1"
-    ". part2Text2";
+    grid-template-areas:
+        "part2Icon part2Heading"
+        ". part2Text1"
+        ". part2Text2";
     row-gap: 7px;
     column-gap: 1.5rem;
     text-align: left;
     width: 100%;
 }
 
-.contactUs .part2 div i{
+.contactUs .part2 div i {
     grid-area: part2Icon;
     color: var(--main);
     font-size: 40px;
 }
 
-.contactUs .part2 div h2{
+.contactUs .part2 div h2 {
     grid-area: part2Heading;
     font-size: 22px;
     margin-bottom: 15px;
 }
 
-.contactUs .part2 div p:nth-child(3){
+.contactUs .part2 div p:nth-child(3) {
     grid-area: part2Text1;
     color: #4d5d6d;
 }
 
-.contactUs .part2 div p:nth-child(4){
+.contactUs .part2 div p:nth-child(4) {
     grid-area: part2Text2;
     color: #4d5d6d;
 }
 
-.contactUs .part3{
+.contactUs .part3 {
     width: 100vw;
     padding: 0 var(--plr);
     display: flex;
@@ -1800,65 +1806,65 @@ footer > div:nth-child(2) > p {
     gap: 4vw;
 }
 
-.contactUs .part3 iframe{
+.contactUs .part3 iframe {
     width: 100%;
     border-radius: 7px;
     height: auto;
 }
 
-.contactUs .part3 form{
+.contactUs .part3 form {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px auto auto auto auto auto auto; 
-    grid-template-areas: 
-    "part3Heading part3Heading"
-    "part3Text part3Text"
-    "part3Input3 part3Input4"
-    "part3Input5 part3Input6"
-    "part3Input7 part3Input7"
-    "part3textarea part3textarea"
-    "part3Input9 part3Input9";
+    grid-template-rows: 50px auto auto auto auto auto auto;
+    grid-template-areas:
+        "part3Heading part3Heading"
+        "part3Text part3Text"
+        "part3Input3 part3Input4"
+        "part3Input5 part3Input6"
+        "part3Input7 part3Input7"
+        "part3textarea part3textarea"
+        "part3Input9 part3Input9";
     gap: 20px;
 }
 
-.contactUs .part3 form h2{
+.contactUs .part3 form h2 {
     grid-area: part3Heading;
     font-size: 30px;
 }
 
-.contactUs .part3 form p{
+.contactUs .part3 form p {
     grid-area: part3Text;
     color: #4d5d6d;
     font-size: 17px;
     line-height: 30px;
 }
 
-.contactUs .part3 form input:nth-child(3){
+.contactUs .part3 form input:nth-child(3) {
     grid-area: part3Input3;
 }
 
-.contactUs .part3 form input:nth-child(4){
+.contactUs .part3 form input:nth-child(4) {
     grid-area: part3Input4;
 }
 
-.contactUs .part3 form input:nth-child(5){
+.contactUs .part3 form input:nth-child(5) {
     grid-area: part3Input5;
 }
 
-.contactUs .part3 form input:nth-child(6){
+.contactUs .part3 form input:nth-child(6) {
     grid-area: part3Input6;
 }
 
-.contactUs .part3 form input:nth-child(7){
+.contactUs .part3 form input:nth-child(7) {
     grid-area: part3Input7;
 }
 
-.contactUs .part3 form textarea{
+.contactUs .part3 form textarea {
     grid-area: part3textarea;
 }
 
-.contactUs .part3 form input:nth-child(9){
+.contactUs .part3 form input:nth-child(9) {
     grid-area: part3Input9;
     width: fit-content;
     border-radius: 7px;
@@ -1869,13 +1875,13 @@ footer > div:nth-child(2) > p {
     transition: all ease 0.3s;
 }
 
-.contactUs .part3 form input:nth-child(9):hover{
+.contactUs .part3 form input:nth-child(9):hover {
     background-color: var(--main);
     color: #fff;
 }
 
 .contactUs .part3 form input,
-.contactUs .part3 form textarea{
+.contactUs .part3 form textarea {
     padding: 15px;
     border-radius: 7px;
     border: 2px solid #eee;
@@ -1884,17 +1890,15 @@ footer > div:nth-child(2) > p {
 }
 
 .contactUs .part3 form input:focus,
-.contactUs .part3 form textarea:focus{
+.contactUs .part3 form textarea:focus {
     border: 2px solid var(--main);
 }
 
 .contactUs .part3 form input::placeholder,
-.contactUs .part3 form textarea::placeholder{
+.contactUs .part3 form textarea::placeholder {
     color: #888;
     font-size: 14px;
 }
-
-
 
 /* end contactUs page */
 
@@ -2213,20 +2217,18 @@ footer > div:nth-child(2) > p {
         margin: 0;
     }
 
-    .contactUs .part3{
+    .contactUs .part3 {
         flex-direction: column;
     }
 
-    .contactUs .part3 iframe{
+    .contactUs .part3 iframe {
         height: 60vw;
     }
 
     /* end contactUs 1000px */
-
 }
 
-@media only screen and (max-width: 850px){
-
+@media only screen and (max-width: 850px) {
     /* start contactUs 850px */
 
     .contactUs .part2 {
@@ -2247,7 +2249,6 @@ footer > div:nth-child(2) > p {
     }
 
     /* end contactUs 850px */
-
 }
 
 @media only screen and (max-width: 690px) {
@@ -2569,17 +2570,15 @@ footer > div:nth-child(2) > p {
     /* end aboutUs 690px */
     /* start contactUs 690px */
 
-    .contactUs .part3 form{
+    .contactUs .part3 form {
         text-align: center;
     }
 
-    .contactUs .part3 input:nth-child(9){
+    .contactUs .part3 input:nth-child(9) {
         margin: auto;
     }
 
     /* end contactUs 690px */
-
-
 }
 
 @media only screen and (max-width: 420px) {
@@ -2615,5 +2614,33 @@ footer > div:nth-child(2) > p {
 
     .aboutUs .part3 div p {
         font-size: 16px;
+    }
+}
+
+.spinner {
+    border: 2px solid gray;
+    border-radius: 50%;
+    border-right: 2px solid black;
+    animation: spin 1s linear 0s infinite normal;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

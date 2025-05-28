@@ -43,11 +43,10 @@ window.onload = function () {
     productBtns.forEach((btn) => {
         btn.addEventListener("click", (e) => {
             var count = 0;
-            e.target.innerHTML = "Adding " + ".".repeat(count);
+            e.target.innerHTML = "Adding <span class='spinner'></span>";
             var t = setInterval(() => {
-                e.target.innerHTML = "Adding " + ".".repeat(count);
                 count++;
-                if (count > 4) {
+                if (count > 3) {
                     clearInterval(t);
                     e.target.innerHTML = "Added ";
                 }
