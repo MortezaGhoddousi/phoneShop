@@ -5,9 +5,9 @@
     <section class="part1">
         <nav>
             <ul>
-                <li><a href="./index.html">home</a></li>
+                <li><a href="./index.php">home</a></li>
                 <span>/</span>
-                <li><a class="active" href="./products.html">products</a></li>
+                <li><a class="active" href="./products.php">products</a></li>
             </ul>
         </nav>
         <h1>products</h1>
@@ -42,7 +42,7 @@
                     <?php $name = $var[$i]['name']; ?>
                     <?php $price = $var[$i]['price']; ?>
                     <?php $category = $var[$i]['category']; ?>
-                    <?php echo ("<aside key=$key>"); ?>
+                    <?php echo ("<aside key=$key id=$key>"); ?>
                         <img src="<?php echo($imageAddress); ?>" alt="<?php echo("$name"); ?>"/>
                         <h3><?php echo("$name"); ?></h3>
                         <p>$<?php echo("$price"); ?></p>

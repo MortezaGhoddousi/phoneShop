@@ -38,4 +38,38 @@ window.onload = function () {
     } else {
         signoutBtn.style.display = "none";
     }
+
+    var productBtns = document.querySelectorAll(".productBtn");
+    productBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            var count = 0;
+            e.target.innerHTML = "Adding " + ".".repeat(count);
+            var t = setInterval(() => {
+                e.target.innerHTML = "Adding " + ".".repeat(count);
+                count++;
+                if (count > 4) {
+                    clearInterval(t);
+                    e.target.innerHTML = "Added ";
+                }
+            }, 500);
+
+            data = {
+                goodId: e.target.parentNode.id,
+                userId: userId,
+            };
+
+            fetch("insert.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: new URLSearchParams(data),
+            })
+                .then((response) => response.text())
+                .then((result) => {
+                    console.log(result);
+                })
+                .catch((error) => console.error("Error:", error));
+        });
+    });
 };

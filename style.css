@@ -832,7 +832,8 @@ footer > div:nth-child(2) > p {
 }
 
 .homePage .part4,
-.homePage .part7 {
+.homePage .part7,
+.contactUs .part4 {
     padding: 100px var(--plr);
     display: flex;
     flex-direction: column;
@@ -842,12 +843,14 @@ footer > div:nth-child(2) > p {
 }
 
 .homePage .part4 > div,
-.homePage .part7 > div {
+.homePage .part7 > div,
+.contactUs .part4 > div {
     width: 100%;
 }
 
 .homePage .part4 > div:nth-child(1),
-.homePage .part7 > div:nth-child(1) {
+.homePage .part7 > div:nth-child(1),
+.contactUs .part4 > div:nth-child(1) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -856,13 +859,15 @@ footer > div:nth-child(2) > p {
 }
 
 .homePage .part4 > div:nth-child(1) h1,
-.homePage .part7 > div:nth-child(1) h1 {
+.homePage .part7 > div:nth-child(1) h1,
+.contactUs .part4 > div:nth-child(1) h1 {
     font-size: 28px;
     font-weight: bold;
 }
 
 .homePage .part4 > div:nth-child(1) p,
-.homePage .part7 > div:nth-child(1) p {
+.homePage .part7 > div:nth-child(1) p,
+.contactUs .part4 > div:nth-child(1) p {
     font-size: 18px;
     color: var(--txtColor);
     margin: 1rem 0;
@@ -871,7 +876,9 @@ footer > div:nth-child(2) > p {
 .homePage .part4 > div:nth-child(1) button,
 .homePage .part4 > div:nth-child(2) aside button,
 .homePage .part7 > div:nth-child(1) button,
-.products .part2 > div:nth-child(2) aside button {
+.products .part2 > div:nth-child(2) aside button,
+.contactUs .part4 > div:nth-child(1) button,
+.contactUs .part4 > div:nth-child(2) aside button{
     border: none;
     outline: none;
     border-radius: 7px;
@@ -884,13 +891,16 @@ footer > div:nth-child(2) > p {
 .homePage .part4 > div:nth-child(1) button:hover,
 .homePage .part4 > div:nth-child(2) aside button:hover,
 .homePage .part7 > div:nth-child(1) button:hover,
-.products .part2 > div:nth-child(2) aside button:hover {
+.products .part2 > div:nth-child(2) aside button:hover,
+.contactUs .part4 > div:nth-child(1) button:hover,
+.contactUs .part4 > div:nth-child(2) aside button:hover {
     background-color: var(--main);
     color: #fff;
     cursor: pointer;
 }
 
-.homePage .part4 > div:nth-child(2) {
+.homePage .part4 > div:nth-child(2),
+.contactUs .part4 > div:nth-child(2) {
     display: grid;
     grid-auto-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -900,32 +910,39 @@ footer > div:nth-child(2) > p {
     gap: 2rem;
 }
 
-.homePage .part4 > div:nth-child(2) aside:nth-child(1) {
+.homePage .part4 > div:nth-child(2) aside:nth-child(1),
+.contactUs .part4 > div:nth-child(2) aside :nth-child(1){
     grid-area: part4Box1;
 }
 
-.homePage .part4 > div:nth-child(2) aside:nth-child(2) {
+.homePage .part4 > div:nth-child(2) aside:nth-child(2),
+.contactUs .part4 > div:nth-child(2) aside :nth-child(2){
     grid-area: part4Box2;
 }
 
-.homePage .part4 > div:nth-child(2) aside:nth-child(3) {
+.homePage .part4 > div:nth-child(2) aside:nth-child(3),
+.contactUs .part4 > div:nth-child(2) aside :nth-child(3){
     grid-area: part4Box3;
 }
 
-.homePage .part4 > div:nth-child(2) aside:nth-child(4) {
+.homePage .part4 > div:nth-child(2) aside:nth-child(4),
+.contactUs .part4 > div:nth-child(2) aside :nth-child(4){
     grid-area: part4Box4;
 }
 
-.homePage .part4 > div:nth-child(2) aside:nth-child(5) {
+.homePage .part4 > div:nth-child(2) aside:nth-child(5),
+.contactUs .part4 > div:nth-child(2) aside :nth-child(5){
     grid-area: part4Box5;
 }
 
-.homePage .part4 > div:nth-child(2) aside:nth-child(6) {
+.homePage .part4 > div:nth-child(2) aside:nth-child(6),
+.contactUs .part4 > div:nth-child(2) aside :nth-child(6){
     grid-area: part4Box6;
 }
 
 .homePage .part4 > div:nth-child(2) aside,
-.products .part2 > div:nth-child(2) aside {
+.products .part2 > div:nth-child(2) aside,
+.contactUs .part4 > div:nth-child(2) aside {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -935,7 +952,8 @@ footer > div:nth-child(2) > p {
 }
 
 .homePage .part4 > div:nth-child(2) aside img,
-.products .part2 > div:nth-child(2) aside img {
+.products .part2 > div:nth-child(2) aside img,
+.contactUs .part4 > div:nth-child(2) aside img {
     width: 100%;
     height: 25vw;
     object-fit: cover;
@@ -946,7 +964,9 @@ footer > div:nth-child(2) > p {
 .homePage .part4 > div:nth-child(2) aside p,
 .homePage .part4 > div:nth-child(2) aside span,
 .products .part2 > div:nth-child(2) aside p,
-.products .part2 > div:nth-child(2) aside span {
+.products .part2 > div:nth-child(2) aside span,
+.contactUs .part4 > div:nth-child(2) aside p,
+.contactUs .part4 > div:nth-child(2) aside span {
     color: #4d5d6d;
     font-size: 16px;
 }
@@ -954,14 +974,18 @@ footer > div:nth-child(2) > p {
 .homePage .part4 > div:nth-child(2) aside h3,
 .homePage .part4 > div:nth-child(2) aside span,
 .products .part2 > div:nth-child(2) aside h3,
-.products .part2 > div:nth-child(2) aside span {
+.products .part2 > div:nth-child(2) aside span,
+.contactUs .part4 > div:nth-child(2) aside h3,
+.contactUs .part4 > div:nth-child(2) aside span {
     transition: all ease 0.3s;
 }
 
 .homePage .part4 > div:nth-child(2) aside h3:hover,
 .homePage .part4 > div:nth-child(2) aside span:hover,
 .products .part2 > div:nth-child(2) aside h3:hover,
-.products .part2 > div:nth-child(2) aside span:hover {
+.products .part2 > div:nth-child(2) aside span:hover,
+.contactUs .part4 > div:nth-child(2) aside h3:hover,
+.contactUs .part4 > div:nth-child(2) aside span:hover {
     color: var(--main);
     cursor: pointer;
 }
@@ -1118,7 +1142,8 @@ footer > div:nth-child(2) > p {
     gap: 2rem;
 }
 
-.homePage .part7 > div:nth-child(2) aside {
+.homePage .part7 > div:nth-child(2) aside,
+.blog .part2 aside {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -1127,13 +1152,15 @@ footer > div:nth-child(2) > p {
     box-shadow: 0 0 26px -5px #eee;
 }
 
-.homePage .part7 > div:nth-child(2) aside img {
+.homePage .part7 > div:nth-child(2) aside img,
+.blog .part2 aside img {
     width: 100%;
     height: 22vw;
     object-fit: cover;
 }
 
-.homePage .part7 > div:nth-child(2) aside div {
+.homePage .part7 > div:nth-child(2) aside div,
+.blog .part2 aside div {
     width: 100%;
     padding: 2.2rem;
     display: flex;
@@ -1143,28 +1170,35 @@ footer > div:nth-child(2) > p {
     gap: 20px;
 }
 
-.homePage .part7 > div:nth-child(2) aside div span {
+.homePage .part7 > div:nth-child(2) aside div span,
+.blog .part2 aside div span {
     font-size: 14px;
     color: #4d5d6d;
 }
 
 .homePage .part7 > div:nth-child(2) aside div h3,
-.homePage .part7 > div:nth-child(2) aside div span {
+.homePage .part7 > div:nth-child(2) aside div span,
+.blog .part2 aside div h3,
+.blog .part2 aside div span {
     transition: all ease 0.3s;
 }
 
 .homePage .part7 > div:nth-child(2) aside div h3:hover,
-.homePage .part7 > div:nth-child(2) aside div span:hover {
+.homePage .part7 > div:nth-child(2) aside div span:hover,
+.blog .part2 aside div h3:hover,
+.blog .part2 aside div span:hover {
     color: var(--main);
     cursor: pointer;
 }
 
-.homePage .part7 > div:nth-child(2) aside div p {
+.homePage .part7 > div:nth-child(2) aside div p,
+.blog .part2 aside div p {
     line-height: 30px;
     color: #4d5d6d;
 }
 
-.homePage .part7 > div:nth-child(2) aside div button {
+.homePage .part7 > div:nth-child(2) aside div button,
+.blog .part2 aside div button {
     border: none;
     outline: none;
     padding: 0.8rem 1rem;
@@ -1176,7 +1210,8 @@ footer > div:nth-child(2) > p {
     transition: all ease 0.3s;
 }
 
-.homePage .part7 > div:nth-child(2) aside div button:hover {
+.homePage .part7 > div:nth-child(2) aside div button:hover,
+.blog .part2 aside div button:hover {
     color: #fff;
     background-color: var(--main);
     cursor: pointer;
@@ -1186,7 +1221,9 @@ footer > div:nth-child(2) > p {
 /* start products page */
 
 .products .part1,
-.aboutUs .part1 {
+.aboutUs .part1,
+.blog .part1,
+.contactUs .part1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1198,7 +1235,9 @@ footer > div:nth-child(2) > p {
 }
 
 .products .part1 nav ul,
-.aboutUs .part1 nav ul {
+.aboutUs .part1 nav ul,
+.blog .part1 nav ul,
+.contactUs .part1 nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1207,18 +1246,24 @@ footer > div:nth-child(2) > p {
 }
 
 .products .part1 nav ul li a,
-.aboutUs .part1 nav ul li a {
+.aboutUs .part1 nav ul li a,
+.blog .part1 nav ul li a,
+.contactUs .part1 nav ul li a {
     color: var(--txtColor);
     text-transform: uppercase;
 }
 
 .products .part1 nav ul li a.active,
-.aboutUs .part1 nav ul li a.active {
+.aboutUs .part1 nav ul li a.active,
+.blog .part1 nav ul li a.active,
+.contactUs .part1 nav ul li a.active {
     color: #fff;
 }
 
 .products .part1 h1,
-.aboutUs .part1 h1 {
+.aboutUs .part1 h1,
+.blog .part1 h1,
+.contactUs .part1 h1 {
     font-size: 55px;
     text-transform: capitalize;
 }
@@ -1308,7 +1353,8 @@ footer > div:nth-child(2) > p {
 /* end products page */
 /* start about-us page */
 
-.aboutUs .part1 {
+.aboutUs .part1,
+.contactUs .part1 {
     padding: 6vw var(--plr) 16vw;
 }
 
@@ -1652,6 +1698,205 @@ footer > div:nth-child(2) > p {
 }
 
 /* end about-us page */
+/* start blog page */
+
+.blog .part2{
+    width: 100vw;
+    padding: 2rem var(--plr);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "part1Box1 part1Box2 part1Box3"
+    "part1Box4 part1Box5 part1Box6";
+    gap: 2rem;
+}
+
+.blog .part2 aside:nth-child(1){
+    grid-area: part1Box1;
+}
+
+.blog .part2 aside:nth-child(2){
+    grid-area: part1Box2;
+}
+
+.blog .part2 aside:nth-child(3){
+    grid-area: part1Box3;
+}
+
+.blog .part2 aside:nth-child(4){
+    grid-area: part1Box4;
+}
+
+.blog .part2 aside:nth-child(5){
+    grid-area: part1Box5;
+}
+
+.blog .part2 aside:nth-child(6){
+    grid-area: part1Box6;
+}
+
+.blog .part2 aside{
+    width: 100%;
+}
+
+/* end blog page */
+/* start contactUs page */
+
+.contactUs .part2{
+    width: 90vw;
+    padding: 0 var(--plr);
+    display: flex;
+    flex-direction: row;
+    padding: 3vw;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -5px #eee;
+    margin: -6rem auto 6vw auto;
+    background-color: #fff;
+    gap: 1rem;
+}
+
+.contactUs .part2 div{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: 
+    "part2Icon part2Heading"
+    ". part2Text1"
+    ". part2Text2";
+    row-gap: 7px;
+    column-gap: 1.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.contactUs .part2 div i{
+    grid-area: part2Icon;
+    color: var(--main);
+    font-size: 40px;
+}
+
+.contactUs .part2 div h2{
+    grid-area: part2Heading;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.contactUs .part2 div p:nth-child(3){
+    grid-area: part2Text1;
+    color: #4d5d6d;
+}
+
+.contactUs .part2 div p:nth-child(4){
+    grid-area: part2Text2;
+    color: #4d5d6d;
+}
+
+.contactUs .part3{
+    width: 100vw;
+    padding: 0 var(--plr);
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+}
+
+.contactUs .part3 iframe{
+    width: 100%;
+    border-radius: 7px;
+    height: auto;
+}
+
+.contactUs .part3 form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto auto auto auto auto auto; 
+    grid-template-areas: 
+    "part3Heading part3Heading"
+    "part3Text part3Text"
+    "part3Input3 part3Input4"
+    "part3Input5 part3Input6"
+    "part3Input7 part3Input7"
+    "part3textarea part3textarea"
+    "part3Input9 part3Input9";
+    gap: 20px;
+}
+
+.contactUs .part3 form h2{
+    grid-area: part3Heading;
+    font-size: 30px;
+}
+
+.contactUs .part3 form p{
+    grid-area: part3Text;
+    color: #4d5d6d;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.contactUs .part3 form input:nth-child(3){
+    grid-area: part3Input3;
+}
+
+.contactUs .part3 form input:nth-child(4){
+    grid-area: part3Input4;
+}
+
+.contactUs .part3 form input:nth-child(5){
+    grid-area: part3Input5;
+}
+
+.contactUs .part3 form input:nth-child(6){
+    grid-area: part3Input6;
+}
+
+.contactUs .part3 form input:nth-child(7){
+    grid-area: part3Input7;
+}
+
+.contactUs .part3 form textarea{
+    grid-area: part3textarea;
+}
+
+.contactUs .part3 form input:nth-child(9){
+    grid-area: part3Input9;
+    width: fit-content;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #f3f5f7;
+    transition: all ease 0.3s;
+}
+
+.contactUs .part3 form input:nth-child(9):hover{
+    background-color: var(--main);
+    color: #fff;
+}
+
+.contactUs .part3 form input,
+.contactUs .part3 form textarea{
+    padding: 15px;
+    border-radius: 7px;
+    border: 2px solid #eee;
+    outline: none;
+    resize: none;
+}
+
+.contactUs .part3 form input:focus,
+.contactUs .part3 form textarea:focus{
+    border: 2px solid var(--main);
+}
+
+.contactUs .part3 form input::placeholder,
+.contactUs .part3 form textarea::placeholder{
+    color: #888;
+    font-size: 14px;
+}
+
+
+
+/* end contactUs page */
 
 @media only screen and (max-width: 1000px) {
     header nav {
@@ -1831,7 +2076,8 @@ footer > div:nth-child(2) > p {
         padding: 1rem 1.5rem;
     }
 
-    .homePage .part7 > div:nth-child(2) aside div {
+    .homePage .part7 > div:nth-child(2) aside div,
+    .blog .part2 aside div {
         padding: 1.5rem;
         gap: 10px;
     }
@@ -1844,7 +2090,9 @@ footer > div:nth-child(2) > p {
     }
 
     .products .part1 h1,
-    .aboutUs .part1 h1 {
+    .aboutUs .part1 h1,
+    .blog .part1 h1,
+    .contactUs .part1 h1 {
         font-size: 40px;
     }
 
@@ -1950,6 +2198,56 @@ footer > div:nth-child(2) > p {
     }
 
     /* end aboutUs 1000px */
+    /* start contactUs 1000px */
+
+    .contactUs .part2 div {
+        column-gap: 1rem;
+    }
+
+    .contactUs .part2 div i {
+        font-size: 35px;
+    }
+
+    .contactUs .part2 div h2 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .contactUs .part3{
+        flex-direction: column;
+    }
+
+    .contactUs .part3 iframe{
+        height: 60vw;
+    }
+
+    /* end contactUs 1000px */
+
+}
+
+@media only screen and (max-width: 850px){
+
+    /* start contactUs 850px */
+
+    .contactUs .part2 {
+        flex-direction: column;
+        row-gap: 3vw;
+    }
+
+    .contactUs .part2 div {
+        padding: 3vw;
+    }
+
+    .contactUs .part2 div i {
+        font-size: 45px;
+    }
+
+    .contactUs .part2 div h2 {
+        font-size: 22px;
+    }
+
+    /* end contactUs 850px */
+
 }
 
 @media only screen and (max-width: 690px) {
@@ -2115,7 +2413,8 @@ footer > div:nth-child(2) > p {
     }
 
     .homePage .part4 > div:nth-child(1),
-    .homePage .part7 > div:nth-child(1) {
+    .homePage .part7 > div:nth-child(1),
+    .contactUs .part4 > div:nth-child(1) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2124,7 +2423,8 @@ footer > div:nth-child(2) > p {
     }
 
     .homePage .part4 div:nth-child(2),
-    .products .part2 div:nth-child(2) {
+    .products .part2 div:nth-child(2),
+    .contactUs .part4 div:nth-child(2) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2137,7 +2437,9 @@ footer > div:nth-child(2) > p {
     .homePage .part6 div,
     .homePage .part7,
     .homePage .part7 div:nth-child(2),
-    .products .part2 > div:nth-child(2) aside {
+    .products .part2 > div:nth-child(2) aside,
+    .blog .part2,
+    .contactUs .part4 div:nth-child(2) aside {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -2147,7 +2449,8 @@ footer > div:nth-child(2) > p {
     }
 
     .homePage .part4 > div:nth-child(2) aside img,
-    .products .part2 > div:nth-child(2) aside img {
+    .products .part2 > div:nth-child(2) aside img,
+    .contactUs .part4 div:nth-child(2) aside img {
         height: auto;
         width: 100%;
     }
@@ -2174,7 +2477,8 @@ footer > div:nth-child(2) > p {
         width: 100%;
     }
 
-    .homePage .part7 > div:nth-child(2) aside img {
+    .homePage .part7 > div:nth-child(2) aside img,
+    .blog .part2 aside img {
         height: 45vw;
     }
 
@@ -2182,7 +2486,8 @@ footer > div:nth-child(2) > p {
         font-size: 35px;
     }
 
-    .homePage .part7 > div:nth-child(2) aside div {
+    .homePage .part7 > div:nth-child(2) aside div,
+    .blog .part2 aside div {
         padding: 8vw;
         gap: 15px;
         text-align: left;
@@ -2197,8 +2502,11 @@ footer > div:nth-child(2) > p {
     }
 
     .products .part1 h1,
-    .aboutUs .part1 h1 {
+    .aboutUs .part1 h1,
+    .blog .part1 h1,
+    .contactUs .part1 h1 {
         font-size: 35px;
+        padding-bottom: 10vw;
     }
 
     /* end products 690px */
@@ -2259,6 +2567,19 @@ footer > div:nth-child(2) > p {
     }
 
     /* end aboutUs 690px */
+    /* start contactUs 690px */
+
+    .contactUs .part3 form{
+        text-align: center;
+    }
+
+    .contactUs .part3 input:nth-child(9){
+        margin: auto;
+    }
+
+    /* end contactUs 690px */
+
+
 }
 
 @media only screen and (max-width: 420px) {
