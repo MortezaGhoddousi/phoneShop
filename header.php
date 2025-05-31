@@ -16,6 +16,9 @@ if ($conn) {
 }
 
 
+$page = $_SERVER['PHP_SELF'];
+$lastPart = basename($page);
+
 
 ?>
 
@@ -66,13 +69,14 @@ $userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
     <header>
         <img src="./assets/logo-light.svg" alt="logo" />
         <nav>
-            <ul>
-                <li class="active"><a href="./index.php">home</a></li>
-                <li><a href="./products.php">products</a></li>
-                <li><a href="./about-us.php">about us</a></li>
-                <li><a href="./blog.php">blog</a></li>
-                <li><a href="./contact-us.php">contact us</a></li>
-            </ul>
+        <ul>
+            <li class="<?= ($lastPart == 'index.php') ? 'active' : '' ?>"><a href="./index.php">home</a></li>
+            <li class="<?= ($lastPart == 'products.php') ? 'active' : '' ?>"><a href="./products.php">products</a></li>
+            <li class="<?= ($lastPart == 'about-us.php') ? 'active' : '' ?>"><a href="./about-us.php">about us</a></li>
+            <li class="<?= ($lastPart == 'blog.php') ? 'active' : '' ?>"><a href="./blog.php">blog</a></li>
+            <li class="<?= ($lastPart == 'contact-us.php') ? 'active' : '' ?>"><a href="./contact-us.php">contact us</a></li>
+        </ul>
+
         </nav>
         <ul>
             <li>

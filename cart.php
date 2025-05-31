@@ -1,6 +1,5 @@
 <?php include("header.php"); ?>
 
-
 <article class="cart">
     <section class="part1">
         <h1>Cart</h1>
@@ -50,26 +49,38 @@
                             <span class="numberOfProduct"><?php echo($varGood[0]['count']); ?></span>
                             <button class="increaseProductBtn">+</button>
                         </td>
-                        <td>
+                        <td class='delete'>
                             <span>$<?php echo($varGood[0]['count'] * $varGood[0]['price']); ?></span>
                             <i class='bx bxs-trash-alt'></i>
                         </td>
                     </tr>
                     <?php } ?>
+                    <?php $discountedSum = $sum; ?>
                 </tbody>
             </table>
-            <form>
-                <input type="text" name="couponCode" value="Coupon code">
+            <form method="POST" action="cart.php">
+                <input type="text" name="couponCode" placeholder="Coupon code">
                 <input type="submit" name="apply" value="Apply coupon">
-                <input type="submit" name="Update" value="Update cart">
             </form>
+
+            <?php
+
+            if (isset($_POST['apply'])) {
+                $discount = $_POST['couponCode'];
+                if ($discount == '1234') {
+                    $discountedSum = $sum * 0.9;
+                }
+
+            }
+
+            ?>
         </div>
         <aside>
             <h1>Cart totals</h1>
             <h2>Subtotal</h2>
             <span>$<?php echo($sum); ?></span>
             <h2>Total</h2>
-            <span>$<?php echo($sum); ?></span>
+            <span>$<?php echo($discountedSum); ?></span>
             <input type="submit" name="ProceedToCheckout" value="Proceed to checkout">
         </aside>
     </section>
