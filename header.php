@@ -118,28 +118,4 @@ $userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 
         </div>
 
-        <!-- <div id="bagCard">
-            <aside>
-                <a href="#"><img src="./assets/product-7-500x415.webp" alt="AirPods Pro" /></a>
-                <a href="#">
-                    <h3>AirPods Pro</h3>
-                </a>
-                <p>$249.00</p>
-                <i class='bx bxs-trash-alt'></i>
-            </aside>
-            <aside>
-                <a href="#"><img src="./assets/product-7-500x415.webp" alt="AirPods Pro" /></a>
-                <a href="#">
-                    <h3>AirPods Pro</h3>
-                </a>
-                <p>$249.00</p>
-                <i class='bx bxs-trash-alt'></i>
-            </aside>
-            <div>
-                <h2>Subtotal:</h2>
-                <span>677.00</span>
-                <a href="./cart.php">View cart</a>
-                <a href="./cart.php">Checkout</a>
-            </div>
-        </div> -->
     </header>
